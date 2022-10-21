@@ -1,0 +1,202 @@
+body
+{
+    font-family: 'Merriweather Sans';
+}
+.nav-custom
+{
+    width: 35px;
+}
+.logo
+{
+    height: 32px;
+    width: 32px;
+    
+}
+
+.logo:hover
+{
+    border: solid lightgoldenrodyellow 5px;
+    background-color: lightgoldenrodyellow;
+    box-sizing: content-box;
+    transition: 350ms;
+}
+
+.skill-heading{
+    
+    font-size: 2rem;
+    font-weight: 900;
+    /* font-family: 'Orbitron', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.skill
+{
+    font-weight: 700;
+    font-size: large;
+}
+.skill-box
+{
+    border: solid black 3px;
+    min-width: 300px;
+    box-shadow: 0px 3px 3px 0px  blueviolet;
+    transform: rotate(3deg);
+    
+}
+.skill-box-mid
+{transform: rotate(-4deg);}
+.skill-box > p
+{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.intro-box
+{
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.intro-box > h1
+{
+    font-family: sacramento, cursive;
+    font-weight: 900;
+    font-size: 4rem;
+}
+.intro-box > p
+{
+    font-family: 'Merriweather Sans';
+    line-height: 2.5;
+}
+
+.cred
+{
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 280px;
+}
+
+.carousel
+{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hide
+{display: none;}
+
+.card
+{
+    min-width: 280px;
+    max-width: 500px;
+    font-family: 'Montserrat', sans-serif;
+    width: 45%;
+}
+.card-header,.card-footer
+{
+    text-align: center;
+    font-weight: bolder;
+}
+.card-header{font-size: 1.3rem;}
+
+/* middle vertical line  */
+.timeline{position: relative;}
+.timeline::after
+{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    border-right:  3px dashed black;
+    opacity: 50%;
+}
+
+/* Arrow mark on the odd cards */
+.timeline-card-header{position: relative;}
+.timeline-card-header::after
+{
+    content: "";
+    position: absolute;
+    top: 34%;
+    right: -9px;
+    height: 16px;
+    width: 16px;
+    background: inherit;
+    transform: rotate(45deg);
+}
+
+/* Arrow mark on the even cards  */
+.timeline-col:nth-child(even) .timeline-card-header::after
+{
+    top: 34%;
+    right: initial;
+    left: -9px;
+
+}
+
+/* padding alternate cards in alternate x-axis ends  */
+.timeline-col:nth-child(odd) 
+{
+    display: flex;
+    justify-content: start;
+    padding-left: 5%;
+}
+.timeline-col:nth-child(even) 
+{
+    display: flex;
+    justify-content: end;
+    padding-right: 5%;
+}
+
+.end
+{
+    width: 100px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    margin-left:-50px;
+    z-index: 2;
+}
+.start
+{
+    width: 100px;
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    margin-left:-50px;
+    z-index: 2;
+}
+
+@media (max-width:767.5px)
+{
+    .timeline-card-header::after,.timeline::after
+    {display: none;}
+    .timeline-col:nth-child(odd) ,.timeline-col:nth-child(even) 
+    {
+        display: block;
+        padding-left: 0;
+        padding-right: 0 ;
+    }
+    .start,.end{display: none;}
+
+}
+
+
+.hobbie-img 
+{
+    width: 200px;
+   display: block;
+   
+}
+
+.hobbie-content
+{
+    line-height: 2;
+}
+
+.food{background-color:#cccbb7 ;}
+.naruto{background-color: #3a3522;}
+.game{background-color: #001b7f;}
+.music{background-color: #ffe0f0;}
+
+.d-flex
+{padding-left: 10px;
+padding-right: 10px;}
