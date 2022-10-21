@@ -200,3 +200,10 @@ body
 .d-flex
 {padding-left: 10px;
 padding-right: 10px;}
+
+.hobbie-content > h3{
+    font-family: sacramento,cursive;
+    font-weight: 900;
+    font-size: 2rem;
+    margin-top: 20px;
+}
