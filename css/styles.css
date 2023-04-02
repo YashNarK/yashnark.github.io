@@ -6,6 +6,11 @@ body
 {
     width: 35px;
 }
+.intro-btn
+{
+    width: 5cm;
+}
+
 .logo
 {
     height: 32px;
