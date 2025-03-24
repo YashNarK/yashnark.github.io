@@ -1,0 +1,25 @@
+name: Update Resume
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  update-resume:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Download Resume
+        run: wget -O resume.pdf "https://1drv.ms/w/c/b7bb63e46b107ffb/Eft_EGvkY7sggLevPQAAAAABhevlGGosg7KV-BW5vKluiA"
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
+          git add resume.pdf
+          git commit -m "Updated resume: $TIMESTAMP" || echo "No changes to commit"
+          git push
